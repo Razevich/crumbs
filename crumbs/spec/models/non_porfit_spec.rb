@@ -24,7 +24,7 @@ describe NonProfit do
   end
 
   it "Should have many Tags" do
-    t = NonProft.reflect_on_association(:tags)
+    t = NonProfit.reflect_on_association(:tags)
     t.macro.should == :has_many
   end
 
