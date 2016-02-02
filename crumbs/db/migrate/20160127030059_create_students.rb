@@ -3,8 +3,10 @@ class CreateStudents < ActiveRecord::Migration
     create_table :students do |t|
       t.text     :first_name, null: false
       t.text     :last_name, null: false
+      t.text     :email, null: false
       t.text     :password, null: false
       t.text     :location
+      t.text     :page_view
 
       t.timestamps null: false
     end
