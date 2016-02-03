@@ -6,7 +6,7 @@ class CreateStudents < ActiveRecord::Migration
       t.text     :email, null: false
       t.text     :password, null: false
       t.text     :location
-      t.text     :page_view
+      t.text     :affiliation
 
       t.timestamps null: false
     end

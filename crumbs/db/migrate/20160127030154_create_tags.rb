@@ -4,6 +4,7 @@ class CreateTags < ActiveRecord::Migration
       t.text     :name
       t.text     :type
       t.text     :location
+      t.text     :field
 
       t.timestamps null: false
     end
