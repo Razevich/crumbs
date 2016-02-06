@@ -5,6 +5,7 @@ class CreateTags < ActiveRecord::Migration
       t.text     :type
       t.text     :location
       t.text     :field
+      t.references :tagable, :polymorphic => true
 
       t.timestamps null: false
     end

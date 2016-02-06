@@ -17,38 +17,74 @@ ActiveRecord::Schema.define(version: 20160127030246) do
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "content"
+    t.integer  "comentable_id"
+    t.string   "comentable_type"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "non_profits", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "name"
+    t.text     "description"
+    t.text     "location"
+    t.text     "website"
+    t.text     "email"
+    t.text     "phone"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "projects", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "name"
+    t.text     "description"
+    t.text     "need"
+    t.text     "reward"
+    t.integer  "non_profit_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "solutions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "solutionable_id"
+    t.string   "solutionable_type"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "students", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "uid",         limit: 8
+    t.string   "first_name"
+    t.string   "url"
+    t.string   "provider"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "location"
+    t.string   "affiliation"
+    t.text     "description"
+    t.string   "image_url"
+    t.string   "token"
+    t.string   "expires_at"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "students_non_profits", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "student_id"
+    t.integer  "non_profit_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "tags", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.text     "name"
+    t.text     "type"
+    t.text     "location"
+    t.text     "field"
+    t.integer  "tagable_id"
+    t.string   "tagable_type"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
 end

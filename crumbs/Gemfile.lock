@@ -210,7 +210,6 @@ DEPENDENCIES
   email_validator
   jbuilder (~> 2.0)
   jquery-rails
-  oauth2
   omniauth-facebook
   pg (~> 0.15)
   piwik_analytics (~> 1.0.0)

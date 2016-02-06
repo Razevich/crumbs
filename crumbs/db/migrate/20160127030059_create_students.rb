@@ -1,12 +1,18 @@
 class CreateStudents < ActiveRecord::Migration
   def change
     create_table :students do |t|
-      t.text     :first_name, null: false
-      t.text     :last_name, null: false
-      t.text     :email, null: false
-      t.text     :password, null: false
-      t.text     :location
-      t.text     :affiliation
+      t.integer  :uid, limit: 8
+      t.string   :first_name
+      t.string   :url
+      t.string   :provider
+      t.string   :last_name
+      t.string   :email
+      t.string   :location
+      t.string   :affiliation
+      t.text     :description
+      t.string   :image_url
+      t.string   :token
+      t.string   :expires_at
 
       t.timestamps null: false
     end

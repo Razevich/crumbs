@@ -5,7 +5,7 @@ class CreateProjects < ActiveRecord::Migration
       t.text     :description
       t.text     :need
       t.text     :reward
-      t.attachment :
+      t.integer  :non_profit_id
 
       t.timestamps null: false
     end
