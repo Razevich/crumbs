@@ -6,7 +6,7 @@ class Student < ActiveRecord::Base
 
   class << self
     def from_omniauth(auth_hash)
-      student = find_or_create_by(uid: auth_hash['uid'], provider: auth_hash['provider'])
+      student = find_or_create_by(uid: auth_hash['uid'].to_s, provider: auth_hash['provider'])
       student.first_name = auth_hash['info']['first_name']
       student.last_name = auth_hash['info']['last_name']
       student.location = auth_hash['info']['location']

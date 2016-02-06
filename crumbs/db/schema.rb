@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 20160127030246) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.integer  "uid",         limit: 8
+    t.string   "uid"
     t.string   "first_name"
     t.string   "url"
     t.string   "provider"
@@ -65,8 +65,8 @@ ActiveRecord::Schema.define(version: 20160127030246) do
     t.string   "image_url"
     t.string   "token"
     t.string   "expires_at"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "students_non_profits", force: :cascade do |t|

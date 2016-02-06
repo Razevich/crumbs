@@ -8,8 +8,8 @@ class SessionsController < ActionController::Base
       session[:student_id] = @student.id
       flash[:success] = "Welcome, #{@student.first_name}!"
 
-    rescue
-      flash[:warning] = "There was an error while trying to authenticate you..."
+    # rescue
+    #   flash[:warning] = "There was an error while trying to authenticate you..."
     end
     redirect_to root_path
   end
