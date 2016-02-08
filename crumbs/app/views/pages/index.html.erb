@@ -1,7 +1,10 @@
 
-
-<h1>Hello</h1>
-  <li><%= link_to 'Facebook', '/auth/facebook' %></li>
-<% if current_user && current_user != nil %>
-  <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-<% end %>
+  <% if current_user && current_user != nil %>
+    <h1>Hello <%= link_to current_user.first_name,
+      student_show_path(current_user.name, current_user.id) %>
+    </h1>
+    <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+  <% else %>
+  <h1>Hello</h1>
+    <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+  <% end %>
