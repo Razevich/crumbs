@@ -7,14 +7,26 @@
     <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
   <% else %>
   <h1>Hello</h1>
+
     <li><%= link_to 'Facebook', '/auth/facebook' %></li>
   <% end %>
 
+
+    <H3>STUDENT LOGIN</H3>
+      <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+
+    <h3>Student register</h3>
+      <li><%= link_to 'Facebook', '/auth/facebook' %></li>
   <!-- Section for nonprofit login goes here. -->
+    <H3>non profit login</H3>
+      <li><%= link_to 'Non_profit Login' %></li>
+    <h3>Non profit register</h3>
+      <li><%= link_to 'Non_profit Register', '/non_profits/new' %></li>
+  <% end %>
 
   <p> Scroll down for pitch for site.</p>
 
   <p> Small displaycase of most recent / trending / whatever projects.</p>
 
   <p> Bottom of page ahs about/faq/disclaimer/legal etc, depending on what's needed.</p>
-  
+

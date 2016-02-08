@@ -3,11 +3,10 @@ class Student < ActiveRecord::Base
   has_many :solutions, as: :solutionable
   has_many :students_non_profits
   has_many :non_profits, through: :students_non_profits
-  # after_create :first_name, :last_name
+
 
   class << self
     def from_omniauth(auth_hash)
-      p auth_hash['info']['name']
       student = find_or_create_by(uid: auth_hash['uid'].to_s, provider: auth_hash['provider'])
       student.name = auth_hash['info']['name']
       student.location = auth_hash['info']['location']
@@ -15,23 +14,11 @@ class Student < ActiveRecord::Base
       student.token = auth_hash['credentials']['token']
       student.expires_at = Time.at(auth_hash.credentials.expires_at)
       student.url = auth_hash['info']['urls'][student.provider.capitalize]
-      student.first_name = self.name.split()[0]
-      student.last_name = self.name.split()[-1]
+      student.first_name = student.name.split()[0]
+      student.last_name = student.name.split()[-1]
       student.save!
       student
     end
   end
-
-  # private
-
-  # def first_name
-  #   self.first_name = self.name.split()[0]
-  #   p test
-  # end
-
-  # def last_name
-  #   self.last_name = self.name.split()[-1]
-  # end
-
 
 end
