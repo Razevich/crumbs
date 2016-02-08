@@ -1,0 +1,18 @@
+<h1> hello there, make a form for this</h1>
+<%= @student.first_name %>
+<%= form_for @student do |f| %>
+  <%=f.label :email %>
+  <%=f.text_field :email %>
+
+  <%=f.label :affiliation %>
+  <%=f.text_field :affiliation %>
+
+  <%=f.label :location %>
+  <%=f.text_field :location %>
+
+  <%=f.label :description %>
+  <%=f.text_area :description %>
+
+  <%=f.submit "Finish registering" %>
+
+<% end %>

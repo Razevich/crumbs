@@ -8,10 +8,10 @@ class SessionsController < ActionController::Base
       session[:student_id] = @student.id
       flash[:success] = "Welcome, #{@student.first_name}!"
 
-    # rescue
-    #   flash[:warning] = "There was an error while trying to authenticate you..."
+    rescue
+      flash[:warning] = "There was an error while trying to authenticate you..."
     end
-    redirect_to root_path
+    redirect_to student_show_path(@student.first_name, @student.last_name, @student.id)
   end
 
   def destroy

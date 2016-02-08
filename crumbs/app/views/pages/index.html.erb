@@ -1,11 +1,7 @@
 
-<% if current_user %>
-  <h1>Hello <%= current_user.first_name %> from <%= current_user.provider %> </h1>
-<%else%>
-  <h1>Hello</h1>
-  <li><%= link_to "Google", '/auth/google_oauth2' %></li>
+
+<h1>Hello</h1>
   <li><%= link_to 'Facebook', '/auth/facebook' %></li>
-<%end%>
 <% if current_user && current_user != nil %>
   <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
 <% end %>

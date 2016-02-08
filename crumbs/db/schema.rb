@@ -53,17 +53,18 @@ ActiveRecord::Schema.define(version: 20160127030246) do
   end
 
   create_table "students", force: :cascade do |t|
-    t.string   "uid"
+    t.string   "name"
     t.string   "first_name"
-    t.string   "url"
-    t.string   "provider"
     t.string   "last_name"
     t.string   "email"
-    t.string   "location"
     t.string   "affiliation"
     t.text     "description"
-    t.string   "image_url"
+    t.string   "uid"
+    t.string   "url"
     t.string   "token"
+    t.string   "provider"
+    t.string   "location"
+    t.string   "image_url"
     t.string   "expires_at"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false

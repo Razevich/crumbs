@@ -1,1 +1,5 @@
-<h1>Hello</h1>
+<% if @student.email.nil? %>
+ <%= render 'edit' %>
+<% else %>
+<h1>Hello <%= @student.first_name %></h1>
+<% end %>

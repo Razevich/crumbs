@@ -5,6 +5,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   scope: 'public_profile', info_fields: 'id, first_name, last_name, link, location'
 end
 
-Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_oauth2, ENV['GOOGLE_ID'], ENV['GOOGLE_SECRET']
-end
+# Rails.application.config.middleware.use OmniAuth::Builder do
+#   provider :google_oauth2, ENV['GOOGLE_ID'], ENV['GOOGLE_SECRET']
+# end

@@ -26,7 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'omniauth'
 gem 'omniauth-facebook'
 # gem 'omniauth-github' If you can figure out how to find when the token expires, put it back in
-gem "omniauth-google-oauth2"
+# gem "omniauth-google-oauth2" Solve later
 
 gem 'email_validator'
 
