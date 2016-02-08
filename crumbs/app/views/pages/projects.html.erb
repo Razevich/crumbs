@@ -1,0 +1,16 @@
+<%= link_to 'back to home via icon', '/index' %>
+<li>some type of top nav</li>
+
+<h1>List of Unsolved Projects</h1>
+<li>list in attractive grid format</li>
+<li>for each project, can click through to</li>
+	<%= link_to 'project details', '/project/id' %>
+	<!-- we need a way to generate unique ids -->
+	<%= link_to 'specific nonprofit', 'nonprofit/name' %>
+	<!-- nonprofit name will be generated from db -->
+	<%= link_to 'specific solution', '/project/id/#solution' %>
+	<!-- jump to portion of project page with that solution -->
+	<%= link_to 'specific dev', '/dev/name' %>
+	<!-- jump from solution's dev's name to their profile, name generated from db -->
+
+<!-- not in MVP: sort (by catg, tags, recent, trend??), search -->
