@@ -1,0 +1,26 @@
+
+<%= form_for @non_profit do |f| %>
+  <%=f.label :email %>
+  <%=f.text_field :email %>
+
+  <%=f.label :website %>
+  <%=f.text_field :website %>
+
+  <%=f.label :location %>
+  <%=f.text_field :location %>
+
+  <%=f.label :description %>
+  <%=f.text_area :description %>
+
+
+  <%=f.label :phone %>
+  <%=f.text_area :phone %>
+
+
+  <%=f.label :name %>
+  <%=f.text_area :name %>
+
+  <%=f.submit "Finish registering" %>
+
+<% end %>
+<%= link_to 'Home', root_path %>

@@ -6,5 +6,13 @@
     <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
   <% else %>
   <h1>Hello</h1>
-    <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+    <H3>STUDENT LOGIN</H3>
+      <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+    <H3>non profit login</H3>
+      <li><%= link_to 'Non_profit Login' %></li>
+
+    <h3>Student register</h3>
+      <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+    <h3>Non profit register</h3>
+      <li><%= link_to 'Non_profit Register', '/non_profits/new' %></li>
   <% end %>
