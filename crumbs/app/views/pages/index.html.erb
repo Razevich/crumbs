@@ -1,7 +1,20 @@
+<p>Logo and tagline and whatever at top. Then split-grid for student vs nonprofit login, and (?) a quick tagline for each type ("want to work on real projects", "need technical help with small projects" or whatever actually sounds appealing).</p>
 
+  <% if current_user && current_user != nil %>
+    <h1>Hello <%= link_to current_user.first_name,
+      student_show_path(current_user.name, current_user.id) %>
+    </h1>
+    <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
+  <% else %>
+  <h1>Hello</h1>
+    <li><%= link_to 'Facebook', '/auth/facebook' %></li>
+  <% end %>
 
-<h1>Hello</h1>
-  <li><%= link_to 'Facebook', '/auth/facebook' %></li>
-<% if current_user && current_user != nil %>
-  <li><%= link_to 'Log Out', logout_path, method: :delete %></li>
-<% end %>
+  <!-- Section for nonprofit login goes here. -->
+
+  <p> Scroll down for pitch for site.</p>
+
+  <p> Small displaycase of most recent / trending / whatever projects.</p>
+
+  <p> Bottom of page ahs about/faq/disclaimer/legal etc, depending on what's needed.</p>
+  
