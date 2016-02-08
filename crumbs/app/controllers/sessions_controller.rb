@@ -11,7 +11,7 @@ class SessionsController < ActionController::Base
     rescue
       flash[:warning] = "There was an error while trying to authenticate you..."
     end
-    redirect_to student_show_path(@student.first_name, @student.last_name, @student.id)
+    redirect_to student_show_path(@student.name, @student.id)
   end
 
   def destroy
