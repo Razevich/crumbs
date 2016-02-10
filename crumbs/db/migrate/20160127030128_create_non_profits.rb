@@ -7,6 +7,8 @@ class CreateNonProfits < ActiveRecord::Migration
       t.text     :website
       t.text     :email
       t.text     :phone
+      t.text     :password
+      t.text     :confirm_password
 
       t.timestamps null: false
     end

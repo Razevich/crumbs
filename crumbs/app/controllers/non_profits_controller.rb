@@ -20,7 +20,7 @@ class NonProfitsController < ApplicationController
   private
 
   def non_profit_params
-    params.require(:non_profit).permit(:name, :description, :location, :website, :email, :phone)
+    params.require(:non_profit).permit(:name, :description, :location, :website, :email, :phone, :password, :confirm_passowrd)
   end
 
 end
